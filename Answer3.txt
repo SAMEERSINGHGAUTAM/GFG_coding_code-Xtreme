@@ -1,0 +1,21 @@
+int setSetBits(int x, int y, int l, int r) {
+    int a =0 , b = 0;
+     l -= 1 ;
+     r -= 1;
+    int i = 0, num1 =0;
+    int c = (x>y) ? (x) : (y);
+
+    while(c>=1) {
+      b = (y>=1) ? (y % 2) : 0;
+      y /= 2;
+      a = (i>=l && i <=r && b==1) ? b : (x >=1) ? (x % 2) : 0;
+      x /=2;
+      c /=2;
+      num1 += a*(Math.pow(2,i));
+      
+      i++;
+
+
+    }
+       return num1;
+  }

@@ -1,0 +1,17 @@
+boolean kthBit(int n, int k) {
+    int count = 0, i = 1, a =1;
+    while(n>1) {
+      a = n%2;
+      n /=2;
+      if(count == k) {
+        break;
+      }
+      
+      count++ ;
+    }
+    if(a == 1) {
+          return true;
+        } else {
+          return false;
+        }
+}
